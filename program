@@ -1,0 +1,67 @@
+#include <iostream>
+#include <string>
+#include<time.h>
+using namespace std;
+
+void info();
+
+int main()
+{
+	srand(time(NULL));
+	info();	cout << endl;
+
+	system("pause");
+}
+
+void info() {
+	int experience; char sex; string name; 
+	cout << "Saludos! Cuantos a~os de experiencia tiene: "; cin >> experience; cout << endl; //experiencia
+	cout << "Cual es su sexo? Entre M para hombre y F para mujer: "; cin >> sex; cout << endl;
+	
+	while ('m' != sex && 'f' != sex && 'F' != sex && 'M' != sex) { cout << "Cual es su sexo? Entre M para hombre y F para mujer: "; cin >> sex; cout << endl; }
+	
+	cout << "Finalmente, para poder terminar su perfil, cual es su nombre? "; cin.ignore(); getline(cin, name); 	cout << endl;
+	system("cls"); // scratch
+
+	//*****************************************
+
+	cout << "Bienvenidos " << name << endl;
+	int num; num = rand() % 7 + 1;
+
+
+	switch (num)
+	{
+		if (experience >= 5) {
+	case 1:
+		cout << "Felicidades! Cualificas para ser un contador! " << endl;
+		cout << "Su salario es de $20.50 la hora" << endl;
+		break;
+	case 2:
+		cout << "Felicidades! Cualificas para ser un programador! " << endl;
+		cout << "Su salario es de $18.75 la hora" << endl;
+		break;
+	case 3:
+		cout << "Felicidades! Cualificas para ser un architecto! " << endl;
+		cout << "Su salario es de $6.75 la hora" << endl;
+		break;
+		}
+		else {
+	case 4:
+		cout << "Felicidades! Cualificas para ser un panadero! " << endl;
+		cout << "Su salario es de $7.50 la hora" << endl;
+		break;
+	case 5:
+		cout << "Felicidades! Cualificas para ser un facebook-quero! " << endl;
+		cout << "Su salario es de $14.50 la hora" << endl;
+		break;
+	case 6:
+		cout << "Felicidades! Cualificas para ser un mimo! " << endl;
+		cout << "Su salario es de $3.25 la hora" << endl;
+		break;
+	case 7:
+		cout << "Felicidades! Cualificas para ser un estatua viviente! " << endl;
+		cout << "Su salario es de $100.50 la hora" << endl;
+		break;
+		}
+	}
+}
